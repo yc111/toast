@@ -1,15 +1,10 @@
 <template>
-    <div>
-        <transition name='slide-fade'>
-            <div class='uco-toast' v-show='isShow'>
-                <span class='tfont icon-success toast-icon' v-if='type === "success"'></span>
-                <span class='tfont icon-danger toast-icon' v-if='type === "danger"'></span>
-                <span class='tfont icon-warning toast-icon' v-if='type === "warning"'></span>
-                <span class='tfont icon-loading toast-icon' v-if='type === "loading"'></span>
+    <transition name='fade'>
+            <div class='uco-toast' v-if='isShow'>
+                <span :class='iconStyle'></span>
                 <span>{{msg}}</span>
             </div>
         </transition>
-    </div>
 </template>
 
 <script>
@@ -20,6 +15,11 @@ export default {
             type: 'success',
             msg: '成功',
             duration: 1
+        }
+    },
+    computed: {
+        iconStyle() {
+            return `tfont icon-${this.type} toast-icon`
         }
     },
     mounted() {
@@ -56,15 +56,15 @@ export default {
     }
 }
 
-.slide-fade-enter-active,
-.slide-fade-leave-active{
+.fade-enter-active,
+.fade-leave-active{
   transition: all .3s ease;
 }
-.slide-fade-enter {
+.fade-enter {
   opacity: 0;
   transform: scale(1.2);
 }
-.slide-fade-leave-to {
+.fade-leave-to {
   opacity: 0;
   transform: scale(0.8);
 }

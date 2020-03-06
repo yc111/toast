@@ -30,7 +30,7 @@ export default {
 ### type
 *string*  
 Default value is 'success'.  
-Type of toast, could be one of these value: `success` | `warning` | `danger` | `loading`.
+Type of toast, could be one of these values: `success` | `warning` | `danger` | `loading`.
 
 ### msg
 *string*  

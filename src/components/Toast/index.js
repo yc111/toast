@@ -7,7 +7,13 @@ const toast = function(options = {}) {
     const toastInstance = new ToastConstructor({
         data: options
     }).$mount();
-    document.body.appendChild(toastInstance.$el);
+    let container = document.querySelector('.uco-toast-container');
+    if(!container) {
+        container = document.createElement('div');
+        container.className = 'uco-toast-container';
+        document.body.appendChild(container);
+    }
+    container.appendChild(toastInstance.$el);
     return toastInstance;
 };
 
