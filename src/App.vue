@@ -8,9 +8,9 @@
 import Demo from './demo/index.vue';
 
 export default {
-    name: 'App',
-    components: {
-        Demo
-    },
-}
+  name: 'App',
+  components: {
+    Demo,
+  },
+};
 </script>
