@@ -29,7 +29,7 @@ export default {
 ## Options and Defaults
 ### type
 *string*  
-Default value is 'success'.  
+Default value is `success`.  
 Type of toast, could be one of these values: `success` | `warning` | `danger` | `loading`.
 
 ### msg
@@ -40,6 +40,12 @@ The info you want to show on the toast. (should be short)
 *number*  
 Default value is 3.  
 How  many seconds he toast should be shown, after that it could disapear automaticly.
+
+### position
+*string*  
+Default value is `top-center`.  
+Position of toast, could be one of these values: `top-left` | `top-center` | `top-right` | `bottom-left` | `bottom-center` | `bottom-right` | `center-center`.
+
 
 ## Example
 ```javascript
