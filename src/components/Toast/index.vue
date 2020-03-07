@@ -14,19 +14,25 @@ export default {
       isShow: false,
       type: 'success',
       msg: '成功',
-      duration: 1,
+      duration: 3,
     };
   },
   computed: {
     iconStyle() {
       return `tfont icon-${this.type} toast-icon`;
     },
+    realDuration() {
+      const isNumber = Number.isInteger(this.duration);
+      return isNumber && this.duration > 0 ? this.duration * 1000 : 'INFINITY';
+    },
   },
   mounted() {
     this.isShow = true;
-    setTimeout(() => {
-      this.isShow = false;
-    }, this.duration * 1000);
+    if (this.realDuration !== 'INFINITY') {
+      setTimeout(() => {
+        this.isShow = false;
+      }, this.realDuration);
+    }
   },
 };
 </script>
@@ -34,14 +40,10 @@ export default {
 <style lang='less' scoped>
 .uco-toast {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top:40%;
-    left: 50%;
-    margin-left: -15vw;
     padding: 2vw;
-    width: 30vw;
+    margin: 5px;
     font-size: 4vw;
     color: #fff;
     text-align: center;

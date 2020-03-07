@@ -22,6 +22,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-param-reassign': 'off',
     'func-names': 'off',
-    'no-console': 'off'
+    'no-console': 'off',
+    "max-len": 'off'
   },
 };
