@@ -1,6 +1,6 @@
 {
   "name": "@champyin/toast",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "description": "A toast component for Vue.js",
   "main": "lib/toast.js",
