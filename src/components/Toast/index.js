@@ -16,7 +16,7 @@ const toast = function (options = {}) {
     data: {
       type,
       msg,
-      duration: duration || -1,
+      duration: duration || 3,
     },
   }).$mount();
   let container = document.querySelector('.uco-toast-container');

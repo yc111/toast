@@ -38,8 +38,9 @@ The info you want to show on the toast. (should be short)
 
 ### duration
 *number*  
-Default value is 3.  
-How  many seconds he toast should be shown, after that it could disapear automaticly.
+Default value is `3`.  
+How many seconds he toast should be shown, after that it could disapear automaticly.
+Specially, you can set a value of `-1`, which means showing the toast forever.
 
 ### position
 *string*  
