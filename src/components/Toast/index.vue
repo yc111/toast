@@ -44,7 +44,7 @@ export default {
     align-items: center;
     padding: 5px 10px;
     margin: 5px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 200;
     color: #fff;
     text-align: center;
@@ -54,7 +54,7 @@ export default {
 
     .toast-icon {
         margin-right: 5px;
-        font-size: 13px;
+        font-size: 14px;
         color: #fff;
     }
 }
