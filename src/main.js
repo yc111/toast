@@ -5,6 +5,7 @@ import 'amfe-flexible';
 import './directives/highlight';
 
 Vue.use(toast);
+Vue.prototype.$bus = new Vue();
 
 new Vue({
   render: (h) => h(App),

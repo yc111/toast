@@ -26,9 +26,11 @@
       </div>
     </div>
     <div class='division'></div>
-    <div class='props-item'>
-      <label class='toast-label'>View Code</label>
-      <Code/>
+    <div>
+      <div class='props-item'>
+        <label class='toast-label'>View Code</label>
+      </div>
+      <CodeBlock/>
       <div class='props-item'>
         <button class='btn' @click='handleClick(type, msg, duration, fullWidth)'>View Toast</button>
       </div>
@@ -39,13 +41,13 @@
 
 <script>
 import Position from './position.vue';
-import Code from './code.vue';
+import CodeBlock from './codeBlock.vue';
 
 export default {
   name: 'demo',
   components: {
     Position,
-    Code,
+    CodeBlock,
   },
   data() {
     return {
@@ -62,13 +64,15 @@ export default {
   },
   methods: {
     handleClick(type, msg, duration, fullWidth) {
-      this.$toast({
+      const options = {
         type,
         msg,
         duration,
         position: this.$refs.position.value,
         fullWidth,
-      });
+      };
+      this.$bus.$emit('change', options);
+      this.$toast(options);
     },
   },
 };
@@ -84,7 +88,7 @@ export default {
 }
 .division {
   border-left: solid 1px #eee;
-  margin: 0 20px 0 10px;
+  margin: 0 35px 0 10px;
   height: 350px;
   align-self: center;
 }
