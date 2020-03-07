@@ -42,32 +42,33 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vw;
+    padding: 5px 10px;
     margin: 5px;
-    font-size: 4vw;
+    font-size: 13px;
+    font-weight: 200;
     color: #fff;
     text-align: center;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 5vw;
-    z-index: 99;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 2px;
+    z-index: 99999;
 
     .toast-icon {
-        margin-right: 1vw;
-        font-size: 4vw;
+        margin-right: 5px;
+        font-size: 13px;
         color: #fff;
     }
 }
 
 .fade-enter-active,
 .fade-leave-active{
-  transition: all .3s ease;
+  transition: all .3s cubic-bezier(.08, .82, .17, 1);
 }
 .fade-enter {
   opacity: 0;
-  transform: scale(1.2);
+  transform: translateY(100%);
 }
 .fade-leave-to {
   opacity: 0;
-  transform: scale(0.8);
+  transform: translateY(-100%);
 }
 </style>

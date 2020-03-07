@@ -13,14 +13,21 @@
       <input type="text" v-model.number='duration'>
     </div>
     <div class='props-item'>
-      <label class='toast-label'>position</label>
+      <label class='toast-label'>Position</label>
       <label class='position-label' v-for="(item, index) in positionList" :key='index'>
         <input type="radio" :value="item" v-model='position'>
         {{item}}
       </label>
     </div>
     <div class='props-item'>
-      <button @click='handleClick(type, msg, duration, position)'>View Toast</button>
+      <label class='toast-label'>Full Width</label>
+      <label class='position-label' v-for="(item) in booleanList" :key='item.label'>
+        <input type="radio" :value="item.value" v-model='fullWidth'>
+        {{item.label}}
+      </label>
+    </div>
+    <div class='props-item'>
+      <button @click='handleClick(type, msg, duration, position, fullWidth)'>View Toast</button>
     </div>
   </div>
 </template>
@@ -35,6 +42,7 @@ export default {
       msg: '成功',
       duration: 3,
       position: 'top-left',
+      fullWidth: false,
       positionList: [
         'top-left',
         'top-center',
@@ -44,15 +52,20 @@ export default {
         'bottom-right',
         'center-center',
       ],
+      booleanList: [
+        { label: 'off', value: false },
+        { label: 'on', value: true },
+      ],
     };
   },
   methods: {
-    handleClick(type, msg, duration, position) {
+    handleClick(type, msg, duration, position, fullWidth) {
       this.$toast({
         type,
         msg,
         duration,
         position,
+        fullWidth,
       });
     },
   },
@@ -68,10 +81,12 @@ export default {
   margin-top: 100px;
 }
 .props-item {
+  max-width: 200px;
   margin: 10px;
 }
 .toast-label {
   display: block;
+  font-weight: 800;
   font-size: 12px;
 }
 .position-label {

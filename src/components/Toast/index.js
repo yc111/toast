@@ -7,7 +7,7 @@ const ToastConstructor = Vue.extend(Toast);
 const defaultPosition = 'top-center';
 const toast = function (options = {}) {
   const {
-    type, msg, duration, position,
+    type, msg, duration, position, fullWidth,
   } = options;
   if (!type && !msg) {
     return null;
@@ -24,9 +24,10 @@ const toast = function (options = {}) {
     container = document.createElement('div');
     document.body.appendChild(container);
   }
-  container.className = position
-    ? `uco-toast-container ${position}`
-    : `uco-toast-container ${defaultPosition}`;
+  let containerClass = 'uco-toast-container';
+  containerClass += position ? ` ${position}` : ` ${defaultPosition}`;
+  containerClass += fullWidth ? ' full-width' : '';
+  container.className = containerClass;
   container.appendChild(toastInstance.$el);
   return toastInstance;
 };

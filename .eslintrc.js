@@ -23,6 +23,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'func-names': 'off',
     'no-console': 'off',
-    "max-len": 'off'
+    'max-len': 'off',
+    'global-require': 'off'
   },
 };

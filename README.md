@@ -46,6 +46,11 @@ How  many seconds he toast should be shown, after that it could disapear automat
 Default value is `top-center`.  
 Position of toast, could be one of these values: `top-left` | `top-center` | `top-right` | `bottom-left` | `bottom-center` | `bottom-right` | `center-center`.
 
+### fullWith
+*boolean*  
+Default value is `false`.  
+Determines the toast appears in a full-with way or not.
+
 
 ## Example
 ```javascript
