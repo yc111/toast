@@ -13,7 +13,7 @@ export default {
     return {
       isShow: false,
       type: 'success',
-      msg: '成功',
+      msg: 'Bravo!',
       duration: 3,
     };
   },

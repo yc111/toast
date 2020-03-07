@@ -19,7 +19,7 @@ export default {
   mounted() {
     this.$toast({
       type: 'success',
-      msg: '成功'
+      msg: 'Bravo!'
     });
   }
 }
@@ -39,7 +39,7 @@ The info you want to show on the toast. (should be short)
 ### duration
 *number*  
 Default value is `3`.  
-How many seconds he toast should be shown, after that it could disapear automaticly.
+How many seconds he toast should be shown, after that it could disapear automaticly.  
 Specially, you can set a value of `-1`, which means showing the toast forever.
 
 ### position
@@ -57,7 +57,8 @@ Determines the toast appears in a full-with way or not.
 ```javascript
 this.$toast({
   type: 'warning',
-  msg: '请注意',
-  duration: 6
+  msg: 'Caution!',
+  duration: 6,
+  position: 'top-center'
 });
 ```
