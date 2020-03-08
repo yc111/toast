@@ -1,17 +1,24 @@
 <template>
   <div class='demo-container'>
+    <div class="title-section">
+        <span class='demo-title'>Toast for Vue.js</span>
+        <div class='title-links'>
+          <a href='https://github.com/yc111/toast/blob/master/README.md' target='_blank'>Readme</a>
+          <a href='https://github.com/yc111/toast/issues' target='_blank'>Issues</a>
+        </div>
+    </div>
     <div>
       <div class='props-item'>
       <label class='toast-label'>Toast Icon</label>
-      <input type="text" v-model='type'>
+      <input class='demo-input' type="text" v-model='type'>
       </div>
       <div class='props-item'>
         <label class='toast-label'>Toast message</label>
-        <input type="text" v-model='msg'>
+        <input class='demo-input' type="text" v-model='msg'>
       </div>
       <div class='props-item'>
         <label class='toast-label'>Duration</label>
-        <input type="text" v-model.number='duration'>
+        <input class='demo-input' type="text" v-model.number='duration'>
       </div>
       <div class='props-item'>
         <label class='toast-label'>Position</label>
@@ -84,11 +91,25 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 120px;
+  margin-top: 10%;
+}
+.title-section {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.demo-title {
+    font-weight: 200;
+    font-size: 24px;
+}
+.title-links {
+  text-align: center;
 }
 .division {
+  display: block;
   border-left: solid 1px #eee;
-  margin: 0 35px 0 10px;
+  margin: 0 35px;
   height: 350px;
   align-self: center;
 }
@@ -125,6 +146,25 @@ export default {
     color: #333;
     transition: all .5s ease;
    }
+}
+
+.demo-input {
+  width: 200px;
+  height: 25px;
+  padding-left: 10px;
+}
+
+@media (max-width: 799px) {
+  .demo-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+  }
+
+  .division {
+    display: none;
+  }
 }
 
 

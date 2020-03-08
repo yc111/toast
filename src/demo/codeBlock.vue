@@ -43,7 +43,7 @@ this.$toast({
 
 <style scoped>
 .code-box {
-  width: 400px;
+  max-width: 400px;
   font-size: 14px;
 }
 .pre-reset {
