@@ -94,7 +94,7 @@ export default {
   margin-top: 10%;
 }
 .title-section {
-  position: fixed;
+  position: absolute;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);

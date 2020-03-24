@@ -59,6 +59,7 @@ this.$toast({
   type: 'warning',
   msg: 'Caution!',
   duration: 6,
-  position: 'top-center'
+  position: 'top-center',
+  fullWith: false
 });
 ```
