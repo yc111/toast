@@ -1,4 +1,5 @@
 # A Simple Popup Tip Component for Vue.js
+[![npm version](https://badge.fury.io/js/%40champyin%2Ftoast.svg)](https://badge.fury.io/js/%40champyin%2Ftoast)
 
 ## Installation
 ```
